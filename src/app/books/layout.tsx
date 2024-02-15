@@ -9,6 +9,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div>Business</div>
         </div>
       </div>
+      <h1>Books</h1>
       <div>{children}</div>
     </div>
   );
