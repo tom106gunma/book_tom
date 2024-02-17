@@ -1,6 +1,6 @@
 import '@/styles/globals.css';
 import '@mantine/core/styles.css';
-import { MantineProvider } from '@mantine/core';
+import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
@@ -16,6 +16,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
+      <head>
+        <ColorSchemeScript defaultColorScheme="auto" />
+      </head>
       <body className={inter.className}>
         <MantineProvider>
           <header className="flex items-end gap-4">
