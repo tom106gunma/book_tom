@@ -1,4 +1,3 @@
-import { Button } from '@mantine/core';
 import { BookCard } from './components/BookCard';
 
 const getBooks = async () => {
@@ -14,7 +13,6 @@ export default async function Page() {
 
   return (
     <div className="flex flex-wrap gap-2">
-      <Button>Button</Button>
       {books.items.map((item: any) => (
         <BookCard
           key={item.id}

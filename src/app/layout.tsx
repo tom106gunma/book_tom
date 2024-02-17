@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <ColorSchemeScript defaultColorScheme="auto" />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} min-h-[100dvh]`}>
         <MantineProvider>
           <header className="flex items-end gap-4">
             <h1 className="font-bold text-3xl">BOOK^TOM</h1>
@@ -30,7 +30,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <ToggleTheme />
           </header>
           <main className="p-12">{children}</main>
-          <footer className="text-center">ktom106gunma</footer>
+          <footer className="sticky top-full h-8 place-content-center border-t font-bold">
+            ktom106gunma
+          </footer>
         </MantineProvider>
       </body>
     </html>
