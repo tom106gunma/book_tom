@@ -26,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="space-x-4">
               <Link href="/">Home</Link>
               <Link href="/books">Books</Link>
+              <Link href="/books/new">Add Books</Link>
             </div>
             <ToggleTheme />
           </header>
