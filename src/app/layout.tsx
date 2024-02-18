@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <ToggleTheme />
           </header>
           <main className="p-12">{children}</main>
-          <footer className="sticky top-full h-8 place-content-center border-t font-bold">
+          <footer className="sticky top-full grid h-8 place-content-center border-t font-bold">
             ktom106gunma
           </footer>
         </MantineProvider>
