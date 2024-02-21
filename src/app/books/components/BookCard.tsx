@@ -1,6 +1,6 @@
-'use client';
 import { Book } from '@prisma/client';
-import { FC } from 'react';
+import { FC, Suspense } from 'react';
+import { BookImage } from './BookImage';
 
 type Props = {
   book: Book;
@@ -9,7 +9,9 @@ type Props = {
 export const BookCard: FC<Props> = ({ book }) => {
   return (
     <div className="border w-48 h-72 rounded flex flex-col items-center justify-center gap-2">
-      <img src={book.url} alt="book image" />
+      <Suspense fallback={<div>loading</div>}>
+        <BookImage url={book.url} />
+      </Suspense>
       <div>{book.title}</div>
       <div>{book.price}</div>
       <a href={book.url} target="_blank" rel="noopener noreferrer">
