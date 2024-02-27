@@ -1,15 +1,12 @@
 'use server';
 
 import { prisma } from '@/server/prisma/client';
+import { Prisma } from '@prisma/client';
 
-export const createBook = async () => {
-  await prisma.book.create({
-    data: {
-      title: 'test',
-      url: 'test',
-      category: 'test',
-      likes: 0,
-      price: 10000,
-    },
+export const createBook = async (params: Prisma.BookCreateInput) => {
+  const book = await prisma.book.create({
+    data: params,
   });
+
+  return book;
 };
